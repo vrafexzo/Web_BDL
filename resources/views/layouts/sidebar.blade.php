@@ -45,25 +45,25 @@
                 <li class="nav-item">
                     {{-- <a href="{{ route('kk-list') }}" class="nav-link"> --}}
                         
-                    <a href="{{ route('mk-index') }}" class="nav-link">
+                    <a href="{{ route('poll-index') }}" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                            Matakuliah
+                            Application
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     {{-- <a href="{{ route('kk-list') }}" class="nav-link"> --}}
                         
-                    <a href="{{ route('poll-index') }}" class="nav-link">
+                    <a href="{{ route('mk-index') }}" class="nav-link">
                         <i class="nav-icon fas fa-building"></i>
                         <p>
-                            Polling
+                            Post Job
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    {{-- <a href="{{ route('kk-list') }}" class="nav-link"> --}}
+                {{-- <li class="nav-item">
+                    <a href="{{ route('kk-list') }}" class="nav-link"> 
                         
                     <a href="{{ route('dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-building"></i>
@@ -71,7 +71,7 @@
                             Hasil
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 @endif
                 @if(Auth::user()->kode_role == 3)
                     <li class="nav-item">
@@ -79,7 +79,7 @@
                         <a href="{{ route('mahasiswa-index') }}" class="nav-link">
                             <i class="nav-icon far fa-id-card"></i>
                             <p>
-                                Voting
+                                
                             </p>
                         </a>
                     </li>
@@ -90,7 +90,7 @@
                         {{-- <a href="/adminindex" class="nav-link"> --}}
                             <i class="nav-icon far fa-user"></i>
                             <p>
-                                Roles
+                                Jobs
                             </p>
                         </a>
                     </li>

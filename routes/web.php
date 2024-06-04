@@ -5,6 +5,7 @@ use App\Http\Controllers\PollingController;
 use App\Http\Controllers\PollingDetailController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostJobController;
 use App\Models\Matakuliah;
 use App\Models\PollingDetail;
 use Illuminate\Support\Facades\Route;
@@ -47,12 +48,12 @@ Route::middleware(['auth', 'cekRole:1'])->group(function () {
 Route::middleware(['auth', 'cekRole:2'])->group(function () {
 
     // MataKuliah
-    Route::get('/prodi/matakuliah', [MatakuliahController::class, 'index'])->name('mk-index');
-    Route::post('/prodi/matakuliah/create', [MatakuliahController::class, 'store'])->name('mk-store');
-    Route::get('/prodi/matakuliah/create', [MatakuliahController::class, 'create'])->name('mk-create');
-    Route::patch('/prodi/edit/{id}', [MatakuliahController::class, 'update'])->name('mk-update');
-    Route::get('/prodi/edit/{id}', [MatakuliahController::class, 'edit'])->name('mk-edit');
-    Route::get('/prodi/delete/{id}', [MatakuliahController::class, 'destroy'])->name('mk-delete');
+    Route::get('/prodi/PostJob', [PostJobController::class, 'index'])->name('mk-index');
+    Route::post('/prodi/PostJob/create', [PostJobController::class, 'store'])->name('mk-store');
+    Route::get('/prodi/PostJob/create', [PostJobController::class, 'create'])->name('mk-create');
+    Route::patch('/prodi/edit/{id}', [PostJobController::class, 'update'])->name('mk-update');
+    Route::get('/prodi/edit/{id}', [PostJobController::class, 'edit'])->name('mk-edit');
+    Route::get('/prodi/delete/{id}', [PostJobController::class, 'destroy'])->name('mk-delete');
 
     // Polling
     Route::get('/prodi/polling', [PollingController::class, 'index'])->name('poll-index');

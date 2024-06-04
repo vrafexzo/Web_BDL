@@ -50,13 +50,13 @@
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: 2272045@maranatha.ac.id" name="email" required autofocus
+                                       placeholder="Contoh: 2272045@gmail.com" name="email" required autofocus
                                        maxlength="32" value="{{ $user->email }}">
                             </div>
                             <div class="form-group">
                                 <label>Kode Role</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="1 = Admin // 2 = Prodi // 3 = Mahasiswa" name="kode_role" required autofocus
+                                       placeholder="1 = Admin // 2 = Company // 3 = JobSeeker" name="kode_role" required autofocus
                                        maxlength="1" value="{{ $user->kode_role }}">
                             </div>
                             <div class="form-group">

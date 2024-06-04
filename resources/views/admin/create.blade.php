@@ -35,12 +35,6 @@
                         <form method="post" action="{{ route('admin-store') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="no-kk">NRP</label>
-                                <input type="text" class="form-control" 
-                                       placeholder="Contoh: 2272045" name="nrp" required autofocus
-                                       maxlength="16">
-                            </div>
-                            <div class="form-group">
                                 <label>Nama</label>
                                 <input type="text" class="form-control" 
                                        placeholder="Contoh: John Doe" name="name" required autofocus
@@ -49,13 +43,13 @@
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: 2272045@maranatha.ac.id" name="email" required autofocus
+                                       placeholder="Contoh: 2272045@gmail.com" name="email" required autofocus
                                        maxlength="32">
                             </div>
                             <div class="form-group">
                                 <label>Kode Role</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="1 = Admin // 2 = Prodi // 3 = Mahasiswa" name="kode_role" required autofocus
+                                       placeholder="1 = Admin // 2 = Company // 3 = JobSeekers" name="kode_role" required autofocus
                                        maxlength="1">
                             </div>
                             <div class="form-group">

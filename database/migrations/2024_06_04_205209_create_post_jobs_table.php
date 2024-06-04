@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('polling_details', function (Blueprint $table) {
+        Schema::create('post_jobs', function (Blueprint $table) {
             $table->id();
+            $table->string('idJob')->nullable();
+            $table->string('jobtitle');
+            $table->string('requirements');
+            $table->integer('salary');
+            $table->date('dateopened');
+            $table->date('dateexpired');
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('polling_details');
+        Schema::dropIfExists('post_jobs');
     }
 };

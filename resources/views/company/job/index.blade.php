@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Data Matakuliah</h1>
+                        <h1 class="m-0">Job Posting</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">MataKuliah</li>
+                            <li class="breadcrumb-item active">Post Job</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -31,30 +31,35 @@
                     @endif
 
                     <div class="card-header">
-                        <a href="{{ route('mk-create') }}" role="button" class="btn btn-success">Tambah Matakuliah</a>
+                        <a href="{{ route('mk-create') }}" role="button" class="btn btn-success">Tambah Job</a>
                         {{-- <a href="{{ route('mk-index') }}" role="button" class="btn btn-success">Tambah Role</a> --}}
                     </div>
                     <div class="card-body">
                         <table id="table-kk" class="table table-striped">
                             <thead>
                             <tr>
-                                <th>Kode MK</th>
-                                <th>Nama MK</th>
-                                <th>SKS</th>
-                                <th>Aksi</th>
+                                <th>ID Job</th>
+                                <th>Job Title</th>
+                                <th>Requirement</th>
+                                <th>Salary</th>
+                                <th>Date Opened</th>
+                                <th>Date Expired</th>
                             </tr>
                             </thead>
                             <tbody>
-                        @foreach ($mks as $mk )
+                        @foreach ($pjs as $pj )
                         <tr>
-                            <td>{{ $mk->kode_mk }}</td>
-                            <td>{{ $mk->nama_mk }}</td>
-                            <td>{{ $mk->sks }}</td>
+                            <td>{{ $pj->idJob }}</td>
+                            <td>{{ $pj->jobtitle }}</td>
+                            <td>{{ $pj->requirements }}</td>
+                            <td>{{ $pj->salary }}</td>
+                            <td>{{ $pj->dateopened }}</td>
+                            <td>{{ $pj->dateexpired }}</td>
                             <td>
                                 {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
 
-                                <a href="{{ route('mk-edit', $mk->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
-                                <a href="{{ route('mk-delete', $mk->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
+                                <a href="{{ route('mk-edit', $pj->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
+                                <a href="{{ route('mk-delete', $pj->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach

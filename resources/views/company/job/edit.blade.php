@@ -36,22 +36,40 @@
                             @csrf
                             @method('patch')
                             <div class="form-group">
-                                <label>Kode MK</label>
+                                <label>Job ID</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: IN242" name="kode_mk" required autofocus
-                                       maxlength="5" value="{{ $mk->kode_mk }}">
+                                       placeholder="Contoh: IJ122" name="kode_mk" required autofocus
+                                       maxlength="5" value="{{ $pj->idJob }}">
                             </div>
                             <div class="form-group">
-                                <label>Nama MK</label>
+                                <label>Job Title</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: Pemrograman Web Lanjut" name="nama_mk" required autofocus
-                                       maxlength="32" value="{{ $mk->nama_mk }}">
+                                       placeholder="Contoh: Senior Programmer" name="nama_mk" required autofocus
+                                       maxlength="32" value="{{ $pj->jobtitle }}">
                             </div>
                             <div class="form-group">
-                                <label>SKS</label>
+                                <label>Requirement</label>
                                 <input type="text" class="form-control" 
-                                       placeholder="Contoh: 2" name="sks" required autofocus
-                                       maxlength="2" value="{{ $mk->sks }}">
+                                       placeholder="Contoh: Tes" name="requirements" required autofocus
+                                       value="{{ $pj->requirements }}">
+                            </div>
+                            <div class="form-group">
+                                <label>Salary</label>
+                                <input type="text" class="form-control" 
+                                       placeholder="Contoh: 200000000" name="salary" required autofocus
+                                       value="{{ $pj->salary }}">
+                            </div>
+                            <div class="form-group">
+                                <label>Date Opened</label>
+                                <input type="date" class="form-control" 
+                                       name="dateopened" required autofocus
+                                       value="{{ $pj->dateopened }}">
+                            </div>
+                            <div class="form-group">
+                                <label>Date Expired</label>
+                                <input type="date" class="form-control" 
+                                       name="dateexpired" required autofocus
+                                       value="{{ $pj->dateexpired }}">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

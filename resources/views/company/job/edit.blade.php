@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Edit Matakuliah</h1>
+                        <h1 class="m-0">Edit Jobs</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -39,7 +39,7 @@
                                 <label>Job ID</label>
                                 <input type="text" class="form-control" 
                                        placeholder="Contoh: IJ122" name="kode_mk" required autofocus
-                                       maxlength="5" value="{{ $pj->idJob }}">
+                                       maxlength="7" value="{{ $pj->idJob }}">
                             </div>
                             <div class="form-group">
                                 <label>Job Title</label>

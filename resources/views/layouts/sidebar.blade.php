@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="{{ route('dashboard') }}" class="brand-link">
 
-        <span class="brand-text font-weight-light">Polling</span>
+        <span class="brand-text font-weight-light">JobSeeker</span>
     </a>
 
     <!-- Sidebar -->
@@ -90,7 +90,7 @@
                         {{-- <a href="/adminindex" class="nav-link"> --}}
                             <i class="nav-icon far fa-user"></i>
                             <p>
-                                Jobs
+                                Users
                             </p>
                         </a>
                     </li>

@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Create Mata Kuliah </h1>
+                        <h1 class="m-0">Create Jobs </h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Mata Kuliah</li>
+                            <li class="breadcrumb-item active">Jobs</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -38,7 +38,7 @@
                                 <label>Job ID</label>
                                 <input type="text" class="form-control" 
                                        placeholder="Contoh: IJ122" name="idJob" required autofocus
-                                       maxlength="5">
+                                       maxlength="7">
                             </div>
                             <div class="form-group">
                                 <label>Job Title</label>

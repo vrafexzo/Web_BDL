@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PostJob;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class PostJobController extends Controller
 {
@@ -29,9 +30,21 @@ class PostJobController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'idJob' => ['required', 'max:7', Rule::unique('post_jobs')],
+            'jobtitle' => 'required|max:32',
+            'requirements' => 'required',
+            'salary' => 'required|integer',
+            'dateopened' => 'required|date',
+            'dateexpired' => 'required|date|after:dateopened',
+        ], [
+            'idJob.unique' => 'Id telah digunakan.'
+        ]);
+    
         PostJob::create($request->all());
-
-        return redirect()->route('mk-index')->with('success','Job Berhasil Ditambahkan');
+        
+        return redirect()->route('mk-index')->with('success', 'Job Berhasil Ditambahkan');
+        
     }
 
     /**
@@ -75,6 +88,6 @@ class PostJobController extends Controller
 
         $pj->delete();
 
-        return redirect()->route('mk-index')->with('success','User Berhasil Dihapus');
+        return redirect()->route('mk-index')->with('success','Job Berhasil Dihapus');
     }
 }

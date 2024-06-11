@@ -31,7 +31,7 @@
                     @endif
 
                     <div class="card-header">
-                        <a href="{{ route('mk-create') }}" role="button" class="btn btn-success">Tambah Job</a>
+                        <a href="{{ route('pj-create') }}" role="button" class="btn btn-success">Tambah Job</a>
                         {{-- <a href="{{ route('mk-index') }}" role="button" class="btn btn-success">Tambah Role</a> --}}
                     </div>
                     <div class="card-body">
@@ -58,8 +58,8 @@
                             <td>
                                 {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
 
-                                <a href="{{ route('mk-edit', $pj->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
-                                <a href="{{ route('mk-delete', $pj->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
+                                <a href="{{ route('pj-edit', $pj->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
+                                <a href="{{ route('pj-delete', $pj->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach

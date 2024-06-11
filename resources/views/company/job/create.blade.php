@@ -32,7 +32,7 @@
                             </div>
                         @endif
 
-                        <form method="post" action="{{ route('mk-store') }}">
+                        <form method="post" action="{{ route('pj-store') }}">
                             @csrf
                             <div class="form-group">
                                 <label>Job ID</label>

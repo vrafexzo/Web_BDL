@@ -43,7 +43,7 @@ class PostJobController extends Controller
     
         PostJob::create($request->all());
         
-        return redirect()->route('mk-index')->with('success', 'Job Berhasil Ditambahkan');
+        return redirect()->route('pj-index')->with('success', 'Job Berhasil Ditambahkan');
         
     }
 
@@ -76,7 +76,7 @@ class PostJobController extends Controller
         $pj->update($request->all());
 
         
-        return redirect()->route('mk-index')->with('success','User Berhasil Diupdate');
+        return redirect()->route('pj-index')->with('success','User Berhasil Diupdate');
     }
 
     /**
@@ -88,6 +88,6 @@ class PostJobController extends Controller
 
         $pj->delete();
 
-        return redirect()->route('mk-index')->with('success','Job Berhasil Dihapus');
+        return redirect()->route('pj-index')->with('success','Job Berhasil Dihapus');
     }
 }

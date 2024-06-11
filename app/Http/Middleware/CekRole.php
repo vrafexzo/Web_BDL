@@ -15,7 +15,7 @@ class CekRole
      */
     public function handle(Request $request, Closure $next, $role): Response
     {
-        if(auth()->user()->kode_role == $role)
+        if(auth()->user()->role == $role)
             return $next($request);
         else{
             return redirect()->back();

@@ -32,7 +32,7 @@
                         </div>
                     @endif
 
-                        <form method="Post" action="{{ route('mk-update', ['id' => $mk->id]) }}">
+                        <form method="Post" action="{{ route('pj-update', ['id' => $mk->id]) }}">
                             @csrf
                             @method('patch')
                             <div class="form-group">

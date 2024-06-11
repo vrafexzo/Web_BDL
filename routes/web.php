@@ -48,14 +48,14 @@ Route::middleware(['auth', 'cekRole:1'])->group(function () {
 Route::middleware(['auth', 'cekRole:2'])->group(function () {
 
     // MataKuliah
-    Route::get('/prodi/PostJob', [PostJobController::class, 'index'])->name('mk-index');
-    Route::post('/prodi/PostJob/create', [PostJobController::class, 'store'])->name('mk-store');
-    Route::get('/prodi/PostJob/create', [PostJobController::class, 'create'])->name('mk-create');
-    Route::patch('/prodi/edit/{id}', [PostJobController::class, 'update'])->name('mk-update');
-    Route::get('/prodi/edit/{id}', [PostJobController::class, 'edit'])->name('mk-edit');
-    Route::get('/prodi/delete/{id}', [PostJobController::class, 'destroy'])->name('mk-delete');
+    Route::get('/company/PostJob', [PostJobController::class, 'index'])->name('pj-index');
+    Route::post('/company/PostJob/create', [PostJobController::class, 'store'])->name('pj-store');
+    Route::get('/company/PostJob/create', [PostJobController::class, 'create'])->name('pj-create');
+    Route::patch('/company/edit/{id}', [PostJobController::class, 'update'])->name('pj-update');
+    Route::get('/company/edit/{id}', [PostJobController::class, 'edit'])->name('pj-edit');
+    Route::get('/company/delete/{id}', [PostJobController::class, 'destroy'])->name('pj-delete');
 
-    // Polling
+    //Polling
     Route::get('/prodi/polling', [PollingController::class, 'index'])->name('poll-index');
     Route::post('/prodi/polling/create', [PollingController::class, 'store'])->name('poll-store');
     Route::get('/prodi/polling/create', [PollingController::class, 'create'])->name('poll-create');

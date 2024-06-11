@@ -61,7 +61,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="text" class="form-control"  placeholder="Contoh: 12345678"
+                                <input type="password" class="form-control"  placeholder="Contoh: 12345678"
                                        required name="password" minlength="8">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>

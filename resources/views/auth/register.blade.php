@@ -24,6 +24,15 @@
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
+            <div class="mt-4">
+                <x-input-label for="role" :value="__('Register as')" />
+                <select id="role" name="role" class="block mt-1 w-full" required>
+                    <option value="3" {{ old('role') == '3' ? 'selected' : '' }}>{{ __('Job Seeker') }}</option>
+                    <option value="2" {{ old('role') == '2' ? 'selected' : '' }}>{{ __('Company') }}</option>
+                </select>
+                <x-input-error :messages="$errors->get('role')" class="mt-2" />
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
                 <x-input-label for="password" :value="__('Password')" />

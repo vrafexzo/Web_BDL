@@ -61,7 +61,7 @@
                         <tr>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email}}</td>
-                            <td>{{ $user->kode_role }}</td>
+                            <td>{{ $user->role }}</td>
                             <td>
                                 <a href="{{ route('admin-edit', $user->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
                                 <a href="{{ route('admin-delete', $user->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>

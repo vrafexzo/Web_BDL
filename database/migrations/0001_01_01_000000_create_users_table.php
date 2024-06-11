@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('kode_role')->default(3); //1 = Admin // 2 = Prodi // 3 = Mahasiswa
+            $table->integer('role'); //1 = Admin // 2 = Company // 3 = Job Seeker
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

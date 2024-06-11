@@ -41,7 +41,7 @@
                         </p>
                     </a>
                 </li>
-                @if(Auth::user()->kode_role == 2)
+                @if(Auth::user()->role == 2)
                 <li class="nav-item">
                     {{-- <a href="{{ route('kk-list') }}" class="nav-link"> --}}
                         
@@ -55,7 +55,7 @@
                 <li class="nav-item">
                     {{-- <a href="{{ route('kk-list') }}" class="nav-link"> --}}
                         
-                    <a href="{{ route('mk-index') }}" class="nav-link">
+                    <a href="{{ route('pj-index') }}" class="nav-link">
                         <i class="nav-icon fas fa-building"></i>
                         <p>
                             Post Job
@@ -73,18 +73,18 @@
                     </a>
                 </li> --}}
                 @endif
-                @if(Auth::user()->kode_role == 3)
+                @if(Auth::user()->role == 3)
                     <li class="nav-item">
                         {{-- <a href="{{ route('ctz-list') }}" class="nav-link"> --}}
                         <a href="{{ route('mahasiswa-index') }}" class="nav-link">
                             <i class="nav-icon far fa-id-card"></i>
                             <p>
-                                
+                                Apply
                             </p>
                         </a>
                     </li>
                 @endif
-                @if(Auth::user()->kode_role == 1)
+                @if(Auth::user()->role == 1)
                     <li class="nav-item">
                         <a href="{{ route('admin-index') }}" class="nav-link">
                         {{-- <a href="/adminindex" class="nav-link"> --}}
@@ -98,8 +98,9 @@
                 <li class="nav-item">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();">
-                            <i class="nav-icon fa fa-sign-out"></i>Logout
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();" class="nav-link">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>Logout</p>
                         </a>
                     </form>
                 </li>

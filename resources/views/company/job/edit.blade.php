@@ -32,7 +32,7 @@
                         </div>
                     @endif
 
-                        <form method="Post" action="{{ route('pj-update', ['id' => $mk->id]) }}">
+                        <form method="Post" action="{{ route('pj-update', ['id' => $pj->id]) }}">
                             @csrf
                             @method('patch')
                             <div class="form-group">
@@ -40,6 +40,12 @@
                                 <input type="text" class="form-control" 
                                        placeholder="Contoh: IJ122" name="kode_mk" required autofocus
                                        maxlength="7" value="{{ $pj->idJob }}">
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" class="form-control" 
+                                       placeholder="Contoh: IJ122" name="company-name" required autofocus
+                                       maxlength="7" value="{{ $pj->companyName }}">
+                            </div>           
                             </div>
                             <div class="form-group">
                                 <label>Job Title</label>

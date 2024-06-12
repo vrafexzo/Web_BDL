@@ -30,10 +30,7 @@
                         </div>
                     @endif
 
-                    <div class="card-header">
-                        <a href="{{ route('pj-create') }}" role="button" class="btn btn-success">Tambah Job</a>
-                        {{-- <a href="{{ route('mk-index') }}" role="button" class="btn btn-success">Tambah Role</a> --}}
-                    </div>
+                    
                     <div class="card-body">
                         <table id="table-kk" class="table table-striped">
                             <thead>
@@ -45,10 +42,11 @@
                                 <th>Salary</th>
                                 <th>Date Opened</th>
                                 <th>Date Expired</th>
+                                <th>Apply</th>
                             </tr>
                             </thead>
                             <tbody>
-                        @foreach ($pjs as $pj )
+                        @foreach ($jbs as $pj )
                         <tr>
                             <td>{{ $pj->idJob }}</td>
                             <td>{{ $pj->companyName }}</td>
@@ -60,8 +58,7 @@
                             <td>
                                 {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
 
-                                <a href="{{ route('pj-edit', $pj->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
-                                <a href="{{ route('pj-delete', $pj->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
+                                <a href="{{ route('pj-edit', $pj->id) }}" class="btn btn-success" role="button"><i class="fas fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach

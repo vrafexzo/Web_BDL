@@ -3,6 +3,7 @@
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\PollingController;
 use App\Http\Controllers\PollingDetailController;
+use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostJobController;
@@ -55,7 +56,7 @@ Route::middleware(['auth', 'cekRole:2'])->group(function () {
     Route::get('/company/edit/{id}', [PostJobController::class, 'edit'])->name('pj-edit');
     Route::get('/company/delete/{id}', [PostJobController::class, 'destroy'])->name('pj-delete');
 
-    //Polling
+    // Application
     Route::get('/prodi/polling', [PollingController::class, 'index'])->name('poll-index');
     Route::post('/prodi/polling/create', [PollingController::class, 'store'])->name('poll-store');
     Route::get('/prodi/polling/create', [PollingController::class, 'create'])->name('poll-create');
@@ -64,10 +65,12 @@ Route::middleware(['auth', 'cekRole:2'])->group(function () {
     Route::get('/prodi/polling/delete/{id}', [PollingController::class, 'destroy'])->name('poll-delete');
 });
 
-// Mahasiswa
+// Job Seeker
 Route::middleware(['auth', 'cekRole:3'])->group(function () {
-    Route::get('/mahasiswa', [PollingDetailController::class, 'index'])->name('mahasiswa-index');
-    Route::get('/mahasiswa/mk', [PollingDetailController::class, 'indexmk'])->name('mahasiswa-indexmk');
+
+    // Apply
+    Route::get('/jobseeker', [ApplyController::class, 'index'])->name('jba-index');
+
 });
 
 

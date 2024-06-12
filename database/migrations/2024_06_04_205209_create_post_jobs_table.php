@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('post_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('idJob')->unique();
+            $table->string('companyName')->default(\Illuminate\Support\Facades\Auth::user()->name);
             $table->string('jobtitle');
             $table->string('requirements');
             $table->integer('salary');

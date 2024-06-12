@@ -76,7 +76,7 @@
                 @if(Auth::user()->role == 3)
                     <li class="nav-item">
                         {{-- <a href="{{ route('ctz-list') }}" class="nav-link"> --}}
-                        <a href="{{ route('mahasiswa-index') }}" class="nav-link">
+                        <a href="{{ route('jba-index') }}" class="nav-link">
                             <i class="nav-icon far fa-id-card"></i>
                             <p>
                                 Apply

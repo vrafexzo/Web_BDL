@@ -15,5 +15,6 @@ class Apply extends Model
         'salary',
         'dateopened',
         'dateexpired',
+        'status',
     ];
 }

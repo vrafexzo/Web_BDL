@@ -1,14 +1,10 @@
 <?php
 
-use App\Http\Controllers\MataKuliahController;
-use App\Http\Controllers\PollingController;
-use App\Http\Controllers\PollingDetailController;
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostJobController;
-use App\Models\Matakuliah;
-use App\Models\PollingDetail;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -48,7 +44,7 @@ Route::middleware(['auth', 'cekRole:1'])->group(function () {
 // Prodi
 Route::middleware(['auth', 'cekRole:2'])->group(function () {
 
-    // MataKuliah
+    // Post Job
     Route::get('/company/PostJob', [PostJobController::class, 'index'])->name('pj-index');
     Route::post('/company/PostJob/create', [PostJobController::class, 'store'])->name('pj-store');
     Route::get('/company/PostJob/create', [PostJobController::class, 'create'])->name('pj-create');
@@ -57,12 +53,12 @@ Route::middleware(['auth', 'cekRole:2'])->group(function () {
     Route::get('/company/delete/{id}', [PostJobController::class, 'destroy'])->name('pj-delete');
 
     // Application
-    Route::get('/prodi/polling', [PollingController::class, 'index'])->name('poll-index');
-    Route::post('/prodi/polling/create', [PollingController::class, 'store'])->name('poll-store');
-    Route::get('/prodi/polling/create', [PollingController::class, 'create'])->name('poll-create');
-    Route::patch('/prodi/polling/edit/{id}', [PollingController::class, 'update'])->name('poll-update');
-    Route::get('/prodi/polling/edit/{id}', [PollingController::class, 'edit'])->name('poll-edit');
-    Route::get('/prodi/polling/delete/{id}', [PollingController::class, 'destroy'])->name('poll-delete');
+    Route::get('/apply/polling', [ApplicationController::class, 'index'])->name('apl-index');
+    Route::post('/apply/polling/create', [ApplicationController::class, 'store'])->name('apl-store');
+    Route::get('/apply/polling/create', [ApplicationController::class, 'create'])->name('apl-create');
+    Route::patch('/apply/polling/edit/{id}', [ApplicationController::class, 'update'])->name('apl-update');
+    Route::get('/apply/polling/edit/{id}', [ApplicationController::class, 'edit'])->name('apl-edit');
+    Route::get('/apply/polling/delete/{id}', [ApplicationController::class, 'destroy'])->name('apl-delete');
 });
 
 // Job Seeker

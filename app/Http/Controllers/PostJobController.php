@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PostJob;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class PostJobController extends Controller
@@ -22,7 +23,8 @@ class PostJobController extends Controller
      */
     public function create()
     {
-        return view('company.job.create');
+        $user = Auth::user();
+        return view('company.job.create',compact('user'));
     }
 
     /**
@@ -34,7 +36,7 @@ class PostJobController extends Controller
             'idJob' => ['required', 'max:7', Rule::unique('post_jobs')],
             'jobtitle' => 'required|max:32',
             'requirements' => 'required',
-            'salary' => 'required|integer',
+            'salary' => 'required|string',
             'dateopened' => 'required|date',
             'dateexpired' => 'required|date|after:dateopened',
         ], [

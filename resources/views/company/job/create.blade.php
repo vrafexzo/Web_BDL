@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Create Jobs </h1>
+                        <h1 class="m-0">Create Jobs</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -19,7 +19,7 @@
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-    
+
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
@@ -34,6 +34,11 @@
 
                         <form method="post" action="{{ route('pj-store') }}">
                             @csrf
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" class="form-control" 
+                                       name="companyName" value="{{ $user->name }}" readonly>
+                            </div>
                             <div class="form-group">
                                 <label>Job ID</label>
                                 <input type="text" class="form-control" 
@@ -72,7 +77,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-
+                            
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -89,7 +94,6 @@
 @section('ExtraJS')
     <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    <script>
-    </script>
+    <script></script>
     <script src="{{ asset('plugins/sweetalert2/sweetalert2.js') }}"></script>
 @endsection

@@ -16,5 +16,7 @@ class PostJob extends Model
         'salary',
         'dateopened',
         'dateexpired',
+        'status'
     ];
+
 }

@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Hasil Polling</h1>
+                        <h1 class="m-0">Job Posting</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Polling</li>
+                            <li class="breadcrumb-item active">Post Job</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -31,30 +31,39 @@
                     @endif
 
                     <div class="card-header">
-                        <a href="{{ route('poll-create') }}" role="button" class="btn btn-success">Tambah Polling</a>
+                        <a href="{{ route('pj-create') }}" role="button" class="btn btn-success">Tambah Job</a>
                         {{-- <a href="{{ route('mk-index') }}" role="button" class="btn btn-success">Tambah Role</a> --}}
                     </div>
                     <div class="card-body">
                         <table id="table-kk" class="table table-striped">
                             <thead>
                             <tr>
-                                <th>Periode</th>
-                                <th>Mulai Polling</th>
-                                <th>Akhir Polling</th>
-                                <th>Aksi</th>
+                                <th>ID Job</th>
+                                <th>Company Name</th>
+                                <th>Job Title</th>
+                                <th>Requirement</th>
+                                <th>Salary</th>
+                                <th>Date Opened</th>
+                                <th>Date Expired</th>
+                              
                             </tr>
                             </thead>
                             <tbody>
-                        @foreach ($polls as $poll )
+                        @foreach ($pjs as $pj )
                         <tr>
-                            <td>{{ $poll->periode }}</td>
-                            <td>{{ $poll->mulai_polling }}</td>
-                            <td>{{ $poll->akhir_polling }}</td>
+                            <td>{{ $pj->idJob }}</td>
+                            <td>{{ $pj->companyName }}</td>
+                            <td>{{ $pj->jobtitle }}</td>
+                            <td>{{ $pj->requirements }}</td>
+                            <td>{{ $pj->salary }}</td>
+                            <td>{{ $pj->dateopened }}</td>
+                            <td>{{ $pj->dateexpired }}</td>
+                     
                             <td>
                                 {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
-                                <a href="{{ route('poll-edit', $poll->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
-                                <a href="{{ route('poll-delete', $poll->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
-                                {{-- <a href="{{ route('mk-delete', $user->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a> --}}
+
+                                <a href="{{ route('pj-edit', $pj->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
+                                <a href="{{ route('pj-delete', $pj->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach

@@ -45,6 +45,7 @@
                                 <th>Salary</th>
                                 <th>Date Opened</th>
                                 <th>Date Expired</th>
+                              
                             </tr>
                             </thead>
                             <tbody>
@@ -57,6 +58,7 @@
                             <td>{{ $pj->salary }}</td>
                             <td>{{ $pj->dateopened }}</td>
                             <td>{{ $pj->dateexpired }}</td>
+                     
                             <td>
                                 {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
 

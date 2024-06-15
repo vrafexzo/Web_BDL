@@ -14,13 +14,15 @@ return new class extends Migration
         Schema::create('post_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('idJob')->unique();
-            $table->string('companyName')->default(\Illuminate\Support\Facades\Auth::user()->name);
+            $table->string('companyName');
             $table->string('jobtitle');
             $table->string('requirements');
-            $table->integer('salary');
+            $table->string('salary');
             $table->date('dateopened');
             $table->date('dateexpired');
+            $table->string('status')->default('pending');
             $table->timestamps();
+            
         });
     }
 

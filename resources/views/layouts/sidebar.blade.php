@@ -45,7 +45,7 @@
                 <li class="nav-item">
                     {{-- <a href="{{ route('kk-list') }}" class="nav-link"> --}}
                         
-                    <a href="{{ route('poll-index') }}" class="nav-link">
+                    <a href="{{ route('apl-index') }}" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Application

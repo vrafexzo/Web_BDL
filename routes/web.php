@@ -53,12 +53,12 @@ Route::middleware(['auth', 'cekRole:2'])->group(function () {
     Route::get('/company/delete/{id}', [PostJobController::class, 'destroy'])->name('pj-delete');
 
     // Application
-    Route::get('/apply/polling', [ApplicationController::class, 'index'])->name('apl-index');
-    Route::post('/apply/polling/create', [ApplicationController::class, 'store'])->name('apl-store');
-    Route::get('/apply/polling/create', [ApplicationController::class, 'create'])->name('apl-create');
-    Route::patch('/apply/polling/edit/{id}', [ApplicationController::class, 'update'])->name('apl-update');
-    Route::get('/apply/polling/edit/{id}', [ApplicationController::class, 'edit'])->name('apl-edit');
-    Route::get('/apply/polling/delete/{id}', [ApplicationController::class, 'destroy'])->name('apl-delete');
+    Route::get('/company/apply', [ApplicationController::class, 'index'])->name('apl-index');
+    Route::post('companyy/apply/create', [ApplicationController::class, 'store'])->name('apl-store');
+    Route::get('/company/apply/create', [ApplicationController::class, 'create'])->name('apl-create');
+    Route::patch('company/apply/edit/{id}', [ApplicationController::class, 'update'])->name('apl-update');
+    Route::get('/company/apply/edit/{id}', [ApplicationController::class, 'edit'])->name('apl-edit');
+    Route::get('/company/apply/delete/{id}', [ApplicationController::class, 'destroy'])->name('apl-delete');
 });
 
 // Job Seeker
@@ -66,6 +66,9 @@ Route::middleware(['auth', 'cekRole:3'])->group(function () {
 
     // Apply
     Route::get('/jobseeker', [ApplyController::class, 'index'])->name('jba-index');
+    Route::post('/jobseeker/apply/store{id}', [ApplyController::class, 'store'])->name('jba-store');
+    Route::get('/jobseeker/apply/create{id}', [ApplyController::class, 'create'])->name('jba-create');
+
 
 });
 

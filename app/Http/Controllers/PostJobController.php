@@ -33,7 +33,7 @@ class PostJobController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'idJob' => ['required', 'max:7', Rule::unique('post_jobs')],
+            // 'idJob' => ['required', 'max:7', Rule::unique('post_jobs')],
             'jobtitle' => 'required|max:32',
             'requirements' => 'required',
             'salary' => 'required|string',

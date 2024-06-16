@@ -39,12 +39,12 @@
                                 <input type="text" class="form-control" 
                                        name="companyName" value="{{ $user->name }}" readonly>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label>Job ID</label>
                                 <input type="text" class="form-control" 
                                        placeholder="Contoh: IJ122" name="idJob" required autofocus
                                        maxlength="7">
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label>Job Title</label>
                                 <input type="text" class="form-control" 

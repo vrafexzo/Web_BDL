@@ -55,10 +55,14 @@
                             <td>{{ $pj->salary }}</td>
                             <td>{{ $pj->dateopened }}</td>
                             <td>{{ $pj->dateexpired }}</td>
+                     
                             <td>
                                 {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
-
-                                <a href="{{ route('pj-edit', $pj->id) }}" class="btn btn-success" role="button"><i class="fas fa-edit"></i></a>
+                                <form action="{{ route('jba-create', ['id' => $pj->id]) }}" method="GET">
+                                    <!-- Isi formulir di sini -->
+                                    <button type="submit">Apply Now</button>
+                                </form>
+                                {{-- <a href="{{ route('jba-create', $pj->id) }}" class="btn btn-success" role="button"><i class="fas fa-edit"></i></a> --}}
                             </td>
                         </tr>
                         @endforeach

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Apply;
 use App\Models\Application;
 use Illuminate\Http\Request;
 
@@ -12,7 +12,9 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        //
+        // $user = Auth::user();
+        $apl = Apply::orderBy('created_at', "DESC")->get();
+        return view('company.apply.index',compact('apl'));
     }
 
     /**

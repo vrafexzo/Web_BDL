@@ -22,7 +22,7 @@ return new class extends Migration
             $table->date('dateexpired');
             $table->string('status')->default('pending');
             $table->timestamps();
-            
+        
 
         });
     }

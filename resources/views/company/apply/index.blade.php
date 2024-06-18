@@ -38,33 +38,35 @@
                         <table id="table-kk" class="table table-striped">
                             <thead>
                             <tr>
-                                <th>ID Job</th>
-                                <th>Company Name</th>
-                                <th>Job Title</th>
-                                <th>Requirement</th>
-                                <th>Salary</th>
-                                <th>Date Opened</th>
-                                <th>Date Expired</th>
+                                <th>ID Apply</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Birth Date</th>
+                                <th>Email</th>
+                                <th>No HP</th>
+                                <th>CV</th>
+                                <th>Status</th>
                               
                             </tr>
                             </thead>
                             <tbody>
-                        @foreach ($pjs as $pj )
+                        @foreach ($apl as $apply )
                         <tr>
-                            <td>{{ $pj->idJob }}</td>
-                            <td>{{ $pj->companyName }}</td>
-                            <td>{{ $pj->jobtitle }}</td>
-                            <td>{{ $pj->requirements }}</td>
-                            <td>{{ $pj->salary }}</td>
-                            <td>{{ $pj->dateopened }}</td>
-                            <td>{{ $pj->dateexpired }}</td>
+                            <td>{{ $apply->idApply }}</td>
+                            <td>{{ $apply->name }}</td>
+                            <td>{{ $apply->address }}</td>
+                            <td>{{ $apply->birthDate }}</td>
+                            <td>{{ $apply->email }}</td>
+                            <td>{{ $apply->noHp }}</td>
+                            <td>{{ $apply->cv }}</td>
+                            <td>{{ $apply->status }}</td>
                      
-                            <td>
-                                {{-- <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> --}}
+                           {{-- <td>
+                                <a href="/" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a> 
 
                                 <a href="{{ route('pj-edit', $pj->id) }}" class="btn btn-warning" role="button"><i class="fas fa-edit"></i></a>
                                 <a href="{{ route('pj-delete', $pj->id) }}" class="btn btn-danger del-button" role="button"><i class="fas fa-trash"></i></a>
-                            </td>
+                            </td>--}}
                         </tr>
                         @endforeach
 
